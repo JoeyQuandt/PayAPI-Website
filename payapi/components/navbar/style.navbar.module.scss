@@ -1,0 +1,75 @@
+@import "../../styles/mixins.scss";
+@import "../../styles/style.scss";
+
+.navBar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-inline: em(24);
+    padding-top: em(40);
+    position: relative;
+    .logo,.hamburger,.navLinks,button{
+        z-index: 1;
+        cursor: pointer;
+    }
+    .bitmap{
+        position: absolute;
+        top: 0;
+        right: 0;
+        background: url("../../public/bitmap.svg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 350px;
+        height: 200px;
+    }
+    .navLinks,button{
+        display: none;
+    }
+    .navLinks{
+        background: transparent;
+    }
+    @include md{
+        padding-inline: em(40);
+        padding-top: em(40);
+        .navLinks,button{
+            display: flex;
+        }
+        .hamburger{
+            display: none;
+        }
+        .navLinks{
+            display: flex;
+            gap: em(40);
+            a{
+                text-decoration: none;
+                font-size: $paragraph;
+                font-family: $publicSans;
+                font-weight: bold;
+                color: $sanJuanBlue;
+                opacity: 0.7;
+            }
+        }
+        .bitmap{
+            width: 850px;
+            height: 800px;
+        }
+    }
+    @include xl{
+        padding-inline: em(165);
+        padding-top: em(40);
+        .navLinks{
+            margin-left: em(64);
+            flex: 2;
+            justify-items: start;
+        }
+        .bitmap{
+            right: 0;
+            background: url("../../public/bitmap_desktop.svg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 350px;
+            width: 780px;
+        }
+
+    }
+}

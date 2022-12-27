@@ -1,0 +1,53 @@
+@import "../../styles/mixins.scss";
+@import "../../styles/style.scss";
+
+.footer{
+    background-color: $mirageBlue;
+    background-image: url("../../public/Bitmap.png");
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: 100%;
+    display: grid;
+    place-items: center;
+    padding-top: em(41);
+    padding-inline: em(120);
+    padding-bottom: em(55);
+    .footerLinks{
+        display: flex;
+        text-align: center;
+        flex-direction: column;
+        padding-block: em(40);
+        gap: em(31);
+        a{
+            font-family: $publicSans;
+            font-weight: bold;
+            text-decoration: none;
+            color: $linkWaterWhite;
+            opacity: 0.7;
+            font-size: $paragraph;
+        }
+    }
+    .footerSocials{
+        display: flex;
+        gap: em(24);
+    }
+    @include md{
+        background-size: 500px 100%;
+        background-image: url("../../public/Bitmap_desktop.png");
+        background-position: right;
+        padding: em(31) em(40);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .footerLinks{
+            flex-direction: row;
+        }
+    }
+    @include xl{
+        padding: em(31) em(165);
+        .footerLinks{
+            margin-left: em(64);
+            flex: 2;
+        }
+    }
+}

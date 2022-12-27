@@ -1,0 +1,109 @@
+@import "style.scss";
+
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  background:#EDF3F8;
+}
+/*Font classes*/
+.header1Large,.header1Small,.header2,.header3Large,.header3Small,.header4{
+  font-family: $serifDisplay;
+}
+
+.header1Large{
+  font-size: $header1Large;
+}
+
+.header1Small{
+  font-size: $header1Small;
+}
+
+.header2{
+  font-size: $header2;
+}
+
+.header3Large{
+  font-size: $header3Large;
+}
+
+.header3Small{
+  font-size: $header3Small;
+}
+
+.header4{
+  font-size: $header4;
+}
+
+.paragraph{
+  font-size: $paragraph;
+  font-family: $publicSans;
+}
+
+/*Buttons*/
+/*===Primary===*/
+.primary{
+  border: none;
+  font-size: $paragraph;
+  font-family: $publicSans;
+  font-weight: bold;
+  color: $linkWaterWhite;
+  background-color: $darkPink;
+  padding: em(14) em(26.5);
+  box-shadow: 10px 10px 25px -10px rgba(54, 83, 107, 0.25);
+  border-radius: 24px;
+  cursor: pointer;
+}
+
+.primary:hover{
+  background-color: $charmPink;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+
+
+.primary:disabled{
+  background-color: $charmPink;
+}
+
+/*===Secondary===*/
+.secondaryLight{
+  background: transparent;
+  padding: em(16) em(32);
+  border: 1px solid #FBFCFE;
+  color: $linkWaterWhite;
+  border-radius: 24px;
+  font-size: $paragraph;
+  font-family: $publicSans;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.secondaryLight:hover{
+  transition: all 0.3s ease;
+  background: $linkWaterWhite;
+  color: $mirageBlue;
+}
+
+.secondaryDark{
+  background: transparent;
+  padding: em(16) em(32);
+  border: 1px solid $sanJuanBlue;
+  color: $sanJuanBlue;
+  border-radius: 24px;
+  font-size: $paragraph;
+  font-family: $publicSans;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.secondaryDark:hover{
+  transition: all 0.3s ease;
+  background: $sanJuanBlue;
+  color: $linkWaterWhite;
+}
