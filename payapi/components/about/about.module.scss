@@ -1,0 +1,27 @@
+@import "../../styles/mixins.scss";
+@import "../../styles/style.scss";
+
+.about{
+    padding: em(80) em(24);
+    .article{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        img{
+            margin-bottom: em(30);
+            width: 100%;
+        }
+        h2{
+            color: $sanJuanBlue;
+            margin-bottom: em(24);
+            font-weight: 400;
+            font-size: 36px;
+        }
+        p{
+            font-family: $publicSans;
+            color: $lightSanJuanBlue;
+            line-height: 28px;
+        }
+    }
+}

@@ -1,0 +1,100 @@
+@import "../../styles/mixins.scss";
+@import "../../styles/style.scss";
+
+.Hero{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    min-width: 375px;
+    img{
+        width: 300px;
+        
+    }
+    .HeroText{
+        padding-inline: em(24);
+        display: flex;
+        align-items: center;
+        gap: em(16);
+        flex-direction: column;
+        h1{
+            color: $sanJuanBlue;
+            max-width: 327px;
+        }
+        p{
+            margin-top: em(8);
+            color: $lightSanJuanBlue;
+            margin-bottom: em(79);
+        }
+        form{
+            display: flex;
+            gap: em(16);
+            flex-direction: column;
+            input{
+                box-shadow: 10px 10px 25px -10px rgba(54, 83, 107, 0.25);
+                border-radius: 24px;
+                border: none;
+                padding-top: em(16);
+                padding-bottom: em(14);
+                padding-left: em(27);
+                padding-right: em(158);
+                font-size:$paragraph;
+                font-weight: bold;
+                color: $lightSanJuanBlue;
+                opacity: 0.5;
+            }
+            button{
+                width: 100%;
+            }
+        }
+    }
+    @include md{
+        .HeroText{
+            padding-inline: em(98);
+            h1{
+                text-align: center;
+                font-size: rem(48);
+                max-width: 573px;
+                margin-bottom: em(10);
+            }
+            form{
+                margin-bottom: em(16);
+                flex-direction: row;
+                button{
+                    margin-left: -100px;
+                    z-index: 1;
+                }
+            }
+        }
+    }
+    @include xl{
+        padding-inline: em(165);
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        .HeroText{
+            padding-inline: 0;
+            margin-top: em(152);
+
+            h1{
+                font-size: rem(72);
+                text-align: left;
+                max-width: 546px;
+            }
+            form{
+                width: 100%;
+                padding-right: em(101);
+            }
+            p{
+                padding-left: em(27);
+                text-align: left;
+                width: 100%;
+            }
+        }
+        img{
+            width: auto;
+            height: 100%;
+        }
+    }
+}

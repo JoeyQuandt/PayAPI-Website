@@ -1,0 +1,62 @@
+@import "../../styles/mixins.scss";
+@import "../../styles/style.scss";
+
+.clients{
+    background-color: $mirageBlue;
+    background-image: url("../../public/home/clients/bitmap_clients.png");
+    background-repeat: no-repeat;
+    background-size: 100% 175px;
+    padding: em(80) em(21);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    .clientsLogo{
+        display: grid;
+        place-items: center;
+        grid-template-columns: repeat(2, 1fr);
+        grid-row-gap: em(40);
+        margin-bottom: em(56);
+    }
+    .clientsText{
+        color: $linkWaterWhite;
+        h2{
+            font-weight: 400;
+            font-size: 32px;
+            margin-bottom: em(16);
+        }
+        p{
+            opacity: 0.7;
+            font-family: $publicSans;
+            font-size: $paragraph;
+            line-height: 28px;
+            margin-bottom: em(60);
+        }
+    }
+    @include md{
+        padding: em(88) em(116);
+        align-items: center;
+        background-image: url("../../public/home/clients/bitmap_clients_md.png");
+        background-size: 100% 235px;
+        .clientsLogo{
+            width: 100%;
+            grid-template-columns: repeat(3, 1fr);
+        }
+        .clientsText{
+            max-width: 457px;
+            h2{
+                font-size: 48px;
+            }
+        }
+    }
+    @include xl{
+        padding: em(100) em(165);
+        background-image: url("../../public/home/clients/bitmap_clients_xl.png");
+        background-size: 575px 100%;
+        background-position: left;
+        flex-direction: row-reverse;
+        .clientsText{
+            text-align: left;
+            margin-right: em(131);
+        }
+    }
+}
