@@ -6,6 +6,7 @@
     background: $mirageBlue;
     top: 0;
     right: 0;
+    transform: translateX(0);
     z-index: 10000;
     height: 100vh;
     width: 75%;
@@ -38,6 +39,9 @@
         span{
             margin-top: em(95);
         }
+    }
+    @include md{
+        display: none;
     }
 }
 
