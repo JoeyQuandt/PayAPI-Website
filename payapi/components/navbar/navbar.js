@@ -58,32 +58,34 @@ export default function Navbar() {
         />
         <button className="primary">Schedule a Demo</button>
       </motion.nav>
-      <motion.div
-        className={styles.menu}
-        animate={menu ? "visible" : "hidden"}
-        variants={{
-          visible: { opacity: 1, x: 0, display: "block" },
-          hidden: { opacity: 0, x: "100%" },
-        }}
-      >
-        <div className={styles.menuItems}>
-          <Image
-            onClick={handleClick}
-            className={styles.close}
-            src="./shared/mobile/close.svg"
-            alt="close"
-            width={22}
-            height={23}
-          />
-          <span className="line"></span>
-          <ul className={styles.navLinks}>
-            <Link href="/">Pricing</Link>
-            <Link href="/">About</Link>
-            <Link href="/">Contact</Link>
-          </ul>
-          <button className="primary">Schedule a Demo</button>
-        </div>
-      </motion.div>
+      {menu && (
+        <motion.div
+          className={styles.menu}
+          animate={menu ? "visible" : "hidden"}
+          variants={{
+            visible: { opacity: 1, x: 0 },
+            hidden: { opacity: 0, x: "100%" },
+          }}
+        >
+          <div className={styles.menuItems}>
+            <Image
+              onClick={handleClick}
+              className={styles.close}
+              src="./shared/mobile/close.svg"
+              alt="close"
+              width={22}
+              height={23}
+            />
+            <span className="line"></span>
+            <ul className={styles.navLinks}>
+              <Link href="/">Pricing</Link>
+              <Link href="/">About</Link>
+              <Link href="/">Contact</Link>
+            </ul>
+            <button className="primary">Schedule a Demo</button>
+          </div>
+        </motion.div>
+      )}
     </>
   );
 }
