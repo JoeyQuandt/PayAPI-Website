@@ -58,5 +58,8 @@
             text-align: left;
             margin-right: em(131);
         }
+        .clientsLogo{
+            grid-column-gap: em(10);
+        }
     }
 }
