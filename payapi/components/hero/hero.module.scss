@@ -9,8 +9,10 @@
     align-items: center;
     margin: auto;
     min-width: 375px;
+    margin-top: em(200);
     img{
-        width: 300px;
+        max-width: 150px;
+        margin-bottom: em(24);
         
     }
     .HeroText{
@@ -29,6 +31,7 @@
             margin-bottom: em(79);
         }
         form{
+            max-width:327px;
             display: flex;
             gap: em(16);
             flex-direction: column;
@@ -45,12 +48,14 @@
                 color: $lightSanJuanBlue;
                 opacity: 0.5;
             }
-            button{
-                max-width: 100%;
-            }
         }
     }
     @include md{
+        margin-top: em(150);
+        img{
+            max-width: 200px;
+            margin-bottom: em(48);
+        }
         .HeroText{
             padding-inline: em(98);
             h1{
@@ -60,6 +65,7 @@
                 margin-bottom: em(10);
             }
             form{
+                max-width:500px;
                 margin-bottom: em(16);
                 flex-direction: row;
                 button{
@@ -70,9 +76,13 @@
         }
     }
     @include xl{
+        margin-top: em(120);
         padding-inline: em(165);
         flex-direction: row-reverse;
         justify-content: space-between;
+        img{
+            max-width: 300px;
+        }
         .HeroText{
             padding-inline: 0;
             margin-top: em(152);
@@ -83,6 +93,7 @@
                 max-width: 546px;
             }
             form{
+                max-width:600px;
                 width: 100%;
                 padding-right: em(101);
             }
@@ -96,5 +107,16 @@
             width: auto;
             height: 100%;
         }
+    }
+    @include rwd(2000px){
+       .HeroText{
+         h1{
+            max-width: 950px;
+            font-size: rem(100);
+         }
+         form{
+            max-width: 100%;
+         }
+       }
     }
 }

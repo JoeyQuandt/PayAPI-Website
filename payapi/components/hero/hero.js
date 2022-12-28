@@ -4,7 +4,7 @@ import Image from "next/image";
 export default function Hero() {
   return (
     <section id="hero" className={styles.Hero}>
-      <img src="./home/desktop/illustration-phone-mockup.svg" alt="phone" />
+      <img src="./home/desktop/phone.svg" alt="phone" />
       <div className={styles.HeroText}>
         <h1 className="header3Large">
           Start building with our APIS for absolutely free.

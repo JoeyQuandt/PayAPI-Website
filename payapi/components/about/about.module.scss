@@ -172,4 +172,29 @@
             }
         }
     }
+    @include rwd(2000px){
+        .article{
+            p{
+                font-size: rem(25);
+                max-width: 750px;
+            }
+        }
+        .benefits{
+            .article{
+                h2{
+                    font-size: rem(30);
+                    text-align: center;
+                }
+                p{
+                    text-align: center;
+                    font-size: rem(20);
+                }
+            }
+        }
+        .demoForm{
+            h2{
+                font-size: rem(65);
+            }
+        }
+     }
 }

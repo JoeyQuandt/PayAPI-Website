@@ -25,7 +25,6 @@ export default function Navbar() {
         height={17}
       />
       <button className="primary">Schedule a Demo</button>
-      <div className={styles.bitmap} />
     </nav>
   );
 }
