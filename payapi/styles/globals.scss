@@ -44,6 +44,14 @@ body{
   font-family: $publicSans;
 }
 
+.line{
+  display: block;
+  background: #FBFCFE;
+  width: 100%;
+  padding: 0.005em;
+  opacity: 0.15;
+}
+
 /*Buttons*/
 /*===Primary===*/
 .primary{

@@ -3,11 +3,10 @@ import Navbar from "./navbar/navbar";
 import Footer from "./footer/footer";
 
 export default function Layout({ children }) {
-  console.log(children);
   return (
     <>
       <Head>
-        <title>Create Next App</title>
+        <title>PayAPI</title>
         <meta
           name="description"
           content="Start building with our APIs for absolutely free."
