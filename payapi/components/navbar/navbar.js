@@ -62,7 +62,7 @@ export default function Navbar() {
         className={styles.menu}
         animate={menu ? "visible" : "hidden"}
         variants={{
-          visible: { opacity: 1, x: 0 },
+          visible: { opacity: 1, x: 0, display: "block" },
           hidden: { opacity: 0, x: "100%" },
         }}
       >
