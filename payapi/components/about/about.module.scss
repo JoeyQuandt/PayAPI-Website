@@ -3,6 +3,7 @@
 
 .about{
     padding: em(80) em(24);
+    overflow-x: hidden;
     .article{
         display: flex;
         flex-direction: column;

@@ -17,12 +17,10 @@ export default function About() {
 
   const dropUpVariants = {
     hidden: {
-      x: -100,
       opacity: 0,
     },
     visible: {
       opacity: 1,
-      x: 0,
       transition: {
         ease: [0.1, 0.25, 0.3, 1],
         duration: 0.6,
