@@ -36,17 +36,19 @@ export default function Navbar() {
           hidden: { opacity: 0, y: -25 },
         }}
       >
-        <Image
-          className={styles.logo}
-          src="./logo.svg"
-          alt="logo"
-          width={135}
-          height={38}
-        />
+        <Link href="/">
+          <Image
+            className={styles.logo}
+            src="./logo.svg"
+            alt="logo"
+            width={135}
+            height={38}
+          />
+        </Link>
         <ul className={styles.navLinks}>
-          <Link href="/">Pricing</Link>
-          <Link href="/">About</Link>
-          <Link href="/">Contact</Link>
+          <Link href="/pricing">Pricing</Link>
+          <Link href="/about">About</Link>
+          <Link href="/contact">Contact</Link>
         </ul>
         <Image
           onClick={handleClick}
@@ -77,9 +79,9 @@ export default function Navbar() {
           />
           <span className="line"></span>
           <ul className={styles.navLinks}>
-            <Link href="/">Pricing</Link>
-            <Link href="/">About</Link>
-            <Link href="/">Contact</Link>
+            <Link href="/pricing">Pricing</Link>
+            <Link href="/about">About</Link>
+            <Link href="/contact">Contact</Link>
           </ul>
           <button className="primary">Schedule a Demo</button>
         </div>

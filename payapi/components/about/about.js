@@ -1,6 +1,7 @@
 import styles from "./about.module.scss";
 import { FadeInWhenVisibleLeft, FadeInWhenVisibleRight } from "../utils";
 import { motion } from "framer-motion";
+import Form from "../elements/form/form";
 
 export default function About() {
   const containerVariants = {
@@ -108,17 +109,7 @@ export default function About() {
           </div>
         </motion.div>
       </motion.div>
-      <div className={styles.demoForm}>
-        <h2 className="header3Large">Ready to start?</h2>
-        <form>
-          <input
-            type="email"
-            name="email"
-            placeholder="Enter email address"
-          ></input>
-          <button className="primary">Schedule a Demo</button>
-        </form>
-      </div>
+      <Form />
     </section>
   );
 }

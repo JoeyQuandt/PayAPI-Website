@@ -43,32 +43,6 @@
             }
         }
     }
-    .demoForm{
-        text-align: center;
-        h2{
-            font-size: 32px;
-            color: $sanJuanBlue;
-        }
-        form{
-            margin-top: em(32);
-            display: flex;
-            gap: em(16);
-            flex-direction: column;
-            input{
-                box-shadow: 10px 10px 25px -10px rgba(54, 83, 107, 0.25);
-                border-radius: 24px;
-                border: none;
-                padding-top: em(16);
-                padding-bottom: em(14);
-                padding-left: em(27);
-                padding-right: em(158);
-                font-size:$paragraph;
-                font-weight: bold;
-                color: $lightSanJuanBlue;
-                opacity: 0.5;
-            }
-        }
-    }
     @include md{
         padding: em(100) em(98);
         .article{
@@ -163,15 +137,6 @@
                 }
             }
         }
-        .demoForm{
-            flex-direction: row;
-            align-items: center;
-            justify-content: space-between;
-            h2{
-                font-size: rem(48);
-                margin-bottom: em(-10);
-            }
-        }
     }
     @include rwd(2000px){
         .article{
@@ -198,4 +163,5 @@
             }
         }
      }
+     
 }

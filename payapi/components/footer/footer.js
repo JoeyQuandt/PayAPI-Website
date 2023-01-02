@@ -7,9 +7,9 @@ export default function footer() {
     <footer className={styles.footer}>
       <Image src="./logo_white.svg" alt="logo" width={135} height={38} />
       <ul className={styles.footerLinks}>
-        <Link href="/">Pricing</Link>
-        <Link href="/">About</Link>
-        <Link href="/">Contact</Link>
+        <Link href="/pricing">Pricing</Link>
+        <Link href="/about">About</Link>
+        <Link href="/contact">Contact</Link>
       </ul>
       <div className={styles.footerSocials}>
         <Image

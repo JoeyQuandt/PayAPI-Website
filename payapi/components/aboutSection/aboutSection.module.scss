@@ -1,0 +1,156 @@
+@import "../../styles/mixins.scss";
+@import "../../styles/style.scss";
+
+.aboutSection{
+    padding-top: em(126);
+    padding-bottom: em(80);
+    background: url("../../public/pricing/bitmap_mobile.svg");
+    background-repeat: no-repeat;
+    background-position: top right;
+    h1{
+        font-family: $serifDisplay;
+        font-size: 32px;
+        color: $sanJuanBlue;
+        text-align: center;
+        margin: auto;
+        margin-bottom: em(40);
+        padding-inline: em(24);
+    }
+    .article{
+        padding-inline: em(24);
+        margin: auto;
+        text-align: center;
+        h2{
+            color: $sanJuanBlue;
+            margin-bottom: em(16);
+        }
+        p{
+            line-height: 28px;
+            font-family: $publicSans;
+            color: $lightSanJuanBlue;
+            margin-bottom: em(48);
+        }
+    }
+    .AboutImage{
+        background: url("../../public/about/mobile/image-team-members.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        min-height: 375px;
+        margin-bottom: em(48);
+    }
+    .AboutNumbers{
+        display: flex;
+        gap: em(32);
+        padding-inline: em(24);
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        margin-block: em(48);
+        .AboutStats{
+            h3{
+                font-size: $paragraph;
+                font-family: $publicSans;
+                color: $sanJuanBlue;
+                opacity: 0.7;
+            }
+            p{
+                color: #BA4270;
+                font-family: $serifDisplay;
+            }
+        }
+    }
+    @include md{
+        background: url("../../public/pricing/bitmap_tablet.svg");
+        background-repeat: no-repeat;
+        background-position: top right;
+        h1{
+            margin-bottom: em(25);
+            font-size: rem(48);
+            width: 100%;
+        }
+        .article{
+            margin-top: em(64);
+            padding-inline: em(40);
+            max-width: 100%;
+            display: flex;
+            gap: em(10);
+            justify-content: space-between;
+            text-align: left;
+            h2{
+                font-size: rem(32);
+                max-width: 223px;
+            }
+            p{
+                max-width: 456px;
+            }
+        }
+        .AboutImage{
+            background: url("../../public/about/tablet/image-team-members.jpg");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            min-height: 267px;
+            margin-bottom: em(64);
+            margin-top: em(92);
+        }
+        .AboutNumbers{
+            padding-inline: em(40);
+            flex-direction: row;
+            justify-content: space-between;
+            span{
+                display: none;
+            }
+            .AboutStats{
+                width: 100%;
+                border-top: 1px solid rgba(54, 83, 107, .25);
+                border-bottom: 1px solid rgba(54, 83, 107, .25);
+                text-align: left;
+                h3{
+                    display: none;
+                }
+            }
+        }
+    }
+    @include xl{
+        background: url("../../public/bitmap_about.svg");
+        background-repeat: no-repeat;
+        background-position:0;
+        .AboutImage{
+            background: url("../../public/about/desktop/image-team-members.jpg");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            min-height: 500px;
+        }
+        .AboutNumbers{
+            padding-inline: em(165);
+            .AboutStats{
+                width: 100%;
+                h3{
+                    margin-top: em(16);
+                    display: block;
+                }
+            }
+        }
+        .article{
+            padding-inline: em(260);
+            width: 100%;
+            p{
+                max-width: 635px;
+            }
+        }
+        .formSection{
+            padding-inline: em(165);
+        }
+        .heading{
+            padding-inline: em(260);
+            text-align: left;
+            h1{
+                text-align: left;
+                max-width: 730px;
+            }
+        }
+    }
+}
+

@@ -1,0 +1,111 @@
+@import "../../styles/mixins.scss";
+@import "../../styles/style.scss";
+
+
+.PricingPlans{
+    background: url("../../public/pricing/bitmap_mobile.svg");
+    background-repeat: no-repeat;
+    background-position: top right;
+    padding-inline: em(24);
+    padding-top: em(126);
+    padding-bottom: em(80);
+    text-align: center;
+    h1{
+        font-family: $serifDisplay;
+        font-size: 32px;
+        color: $sanJuanBlue;
+        margin-bottom: em(48);
+    }
+    p{
+        display: none;
+    }
+    .PricingCard{
+        margin-bottom: em(48);
+        h2{
+            color: $darkPink;
+            margin-bottom: em(61);
+        }
+        h3{
+            color: $sanJuanBlue;
+        }
+        .Benefits{
+            list-style: none;
+            margin-bottom: em(24);
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            gap: em(8);
+            font-family: $publicSans;
+            font-size: rem(16);
+            color: #36536B;
+            li{
+                width: 134px;
+                display: flex;
+                justify-content: space-between;
+            }
+            .line{
+                    display: block;
+                    background: #36536B;
+                    width: 100%;
+                    padding: 0.007em;
+                    opacity: 0.25;
+                    margin-block: em(24);
+            }
+        }
+    }
+    @include md{
+        background: url("../../public/pricing/bitmap_desktop.svg");
+        background-repeat: no-repeat;
+        background-position: top right;
+        padding-top: em(163);
+        padding-inline: em(40);
+        padding-bottom: em(100);
+        h1{
+            font-size: 48px;
+            margin-bottom: em(25);
+        }
+        .PricingPlansGrid{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: em(10);
+            margin-bottom: em(100);
+        }
+        .PricingCard{
+            h2{
+                margin-bottom: em(13);
+            }
+            p{
+                display: block;
+                color: #6C8294;
+                font-size: $paragraph;
+                line-height: 28px;
+                font-family: $publicSans;
+                margin-bottom: em(19);
+            }
+        }
+        .fadedList{
+            margin-left: auto;
+
+        }
+    }
+    @include xl{
+        padding-top: em(170);
+        padding-inline: em(165);
+        .PricingPlansGrid{
+            gap: em(30);
+        }
+        h1{
+            text-align: left;
+        }
+        .PricingCard{
+            text-align: left;
+            .Benefits{
+                li{
+                    width: 100%;
+                    justify-content: flex-start;
+                    gap: em(24);
+                }
+            }
+        }
+    }
+}
