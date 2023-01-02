@@ -1,4 +1,4 @@
-## Dept frontend case
+## Payapi
 
 ![](case.gif)
 Frontend mentor 4-page website challenge. Marketing site with custom form validation, layouts
