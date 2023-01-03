@@ -126,3 +126,86 @@ body{
   background: $sanJuanBlue;
   color: $linkWaterWhite;
 }
+
+/*Form*/
+.form{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-wrapper{
+  display: flex;
+  flex-direction: column;
+}
+
+.form_input{
+  background: transparent;
+  border: none;
+  font-family: $publicSans;
+  color: $sanJuanBlue;
+  opacity: 0.5;
+  font-size: $paragraph;
+  padding-left: em(20);
+  padding-bottom: em(17);
+  border-bottom: 1px solid $sanJuanBlue;
+}
+
+.form_input:hover{
+  border: none;
+  opacity: 1;
+  border-bottom: 1px solid $sanJuanBlue;
+}
+
+.form_input:active{
+  border: none;
+  opacity: 1;
+  border-bottom: 1px solid $sanJuanBlue;
+}
+
+.form_input:focus{
+  outline: none;
+  opacity: 1;
+  border-bottom: 1px solid $sanJuanBlue;
+}
+
+
+.form-wrapper-check{
+  display: flex;
+  gap: em(26);
+  font-size: $paragraph;
+  font-family: $publicSans;
+  color: $sanJuanBlue;
+  align-items: center;
+  input{
+    display: none;
+  }
+  .form_checkbox-label{
+    position: relative;
+    display: block;
+    height: 24px;
+    width: 24px;
+    opacity: 0.5;
+    background: #36536B;
+    cursor: pointer;
+    img{
+      display: none;
+      position: absolute;
+      margin: auto;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+    }
+  }
+  input:checked ~ .form_checkbox-label{
+    cursor: pointer;
+    background: $darkPink;
+    opacity: 1;
+    img{
+      display: block;
+    }
+  }
+}

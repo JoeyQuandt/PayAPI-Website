@@ -9,7 +9,7 @@
     background-position: top right;
     h1{
         font-family: $serifDisplay;
-        font-size: 32px;
+        font-size: rem(32);
         color: $sanJuanBlue;
         text-align: center;
         margin: auto;
@@ -113,18 +113,20 @@
         }
     }
     @include xl{
-        background: url("../../public/bitmap_about.svg");
+        background: url("../../public/bitmap_about.svg"), url("../../public/pricing/bitmap_desktop.svg");
         background-repeat: no-repeat;
-        background-position:0;
+        background-position:0, top right;
         .AboutImage{
             background: url("../../public/about/desktop/image-team-members.jpg");
             background-repeat: no-repeat;
             background-position: center;
             background-size: cover;
             min-height: 500px;
+            margin-bottom: em(72);
         }
         .AboutNumbers{
             padding-inline: em(165);
+            margin-bottom: em(72);
             .AboutStats{
                 width: 100%;
                 h3{
@@ -141,14 +143,17 @@
             }
         }
         .formSection{
+            margin-block: em(100);
             padding-inline: em(165);
         }
         .heading{
             padding-inline: em(260);
-            text-align: left;
+            margin-bottom: em(51);
             h1{
+                margin-left: 0;
+                padding-left: 0;
+                max-width: 720px;
                 text-align: left;
-                max-width: 730px;
             }
         }
     }

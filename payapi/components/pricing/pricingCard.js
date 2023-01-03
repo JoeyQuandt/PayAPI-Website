@@ -33,7 +33,7 @@ export default function PricingCard(props) {
         {benefitsElements}
         <span className={styles.line}></span>
       </ul>
-      <button className="secondaryDark">Request Acces</button>
+      <button className="secondaryDark">Request Access</button>
     </div>
   );
 }
