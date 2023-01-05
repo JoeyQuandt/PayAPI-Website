@@ -55,4 +55,4 @@ function FadeInWhenVisibleRight({ children }) {
   );
 }
 
-export { FadeInWhenVisibleRight, FadeInWhenVisibleLeft };
+export { FadeInWhenVisibleRight, FadeInWhenVisibleLeft, FadeInWhenVisible };

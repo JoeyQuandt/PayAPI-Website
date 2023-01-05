@@ -3,7 +3,8 @@
 
 .menu{
     position: fixed;
-    background: $mirageBlue;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background: #1B262F;
     top: 0;
     right: 0;
     z-index: 10000;
@@ -79,6 +80,10 @@
                 font-weight: bold;
                 color: $sanJuanBlue;
                 opacity: 0.7;
+            }
+            a:hover{
+                transition: all 0.3s ease;
+                color: $darkPink;
             }
         }
     }

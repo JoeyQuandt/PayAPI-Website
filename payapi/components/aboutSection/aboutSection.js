@@ -1,14 +1,45 @@
 import styles from "./aboutSection.module.scss";
 import Form from "../elements/form/form";
+import { motion } from "framer-motion";
+import { FadeInWhenVisibleLeft, FadeInWhenVisibleRight } from "../utils";
 
 export default function AboutSection() {
+  const containerVariants = {
+    hidden: {
+      opacity: 0,
+    },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.3, // this will set the time inbetween children animation
+      },
+    },
+  };
+
+  const dropUpVariants = {
+    hidden: {
+      x: -100,
+      opacity: 0,
+    },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: {
+        ease: [0.1, 0.25, 0.3, 1],
+        duration: 0.6,
+      },
+    },
+  };
+
   return (
     <section id="about" className={styles.aboutSection}>
-      <div className={styles.heading}>
-        <h1 className="heading3Large">
-          We empower innovators by delivering access to the financial system
-        </h1>
-      </div>
+      <FadeInWhenVisibleLeft>
+        <div className={styles.heading}>
+          <h1 className="heading3Large">
+            We empower innovators by delivering access to the financial system
+          </h1>
+        </div>
+      </FadeInWhenVisibleLeft>
       <div className={styles.article}>
         <h2 className="header4">Our Vision</h2>
         <p>
@@ -29,22 +60,26 @@ export default function AboutSection() {
         </p>
       </div>
       <div className={styles.AboutImage} />
-      <div className={styles.AboutNumbers}>
-        <span className="line2"></span>
-        <div className={styles.AboutStats}>
+      <motion.div
+        className={styles.AboutNumbers}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        variants={containerVariants}
+      >
+        <motion.div className={styles.AboutStats} variants={dropUpVariants}>
           <h3>Team Members</h3>
           <p className="header1Small">300+</p>
-        </div>
-        <div className={styles.AboutStats}>
+        </motion.div>
+        <motion.div className={styles.AboutStats} variants={dropUpVariants}>
           <h3>Offices in the US</h3>
           <p className="header1Small">3</p>
-        </div>
-        <div className={styles.AboutStats}>
+        </motion.div>
+        <motion.div className={styles.AboutStats} variants={dropUpVariants}>
           <h3>Transactions analyzed</h3>
           <p className="header1Small">10M+</p>
-        </div>
-        <span className="line2"></span>
-      </div>
+        </motion.div>
+      </motion.div>
       <div className={styles.article}>
         <h2 className="header4">The Culture</h2>
         <p>

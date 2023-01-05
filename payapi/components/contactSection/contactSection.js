@@ -1,5 +1,6 @@
 import styles from "./contactSection.module.scss";
 import Form from "../elements/form/form";
+import { FadeInWhenVisibleLeft, FadeInWhenVisibleRight } from "../utils";
 
 export default function ContactSection() {
   return (
@@ -10,62 +11,64 @@ export default function ContactSection() {
         </h1>
       </div>
       <section className={styles.formClients}>
-        <form className={styles.formSection}>
-          <input
-            className="form_input"
-            type="text"
-            id="name"
-            name="name"
-            placeholder="Name"
-            required
-          />
-          <input
-            className="form_input"
-            type="email"
-            id="email"
-            name="email"
-            placeholder="Email Address"
-            required
-          />
-          <input
-            className="form_input"
-            type="text"
-            id="company"
-            name="company"
-            placeholder="Company Name"
-            required
-          />
-          <input
-            className="form_input"
-            type="text"
-            id="title"
-            name="title"
-            placeholder="Title"
-            required
-          />
-          <textarea
-            className="form_input"
-            type="text"
-            id="message"
-            name="message"
-            placeholder="Message"
-            required
-          ></textarea>
-          <label className="form-wrapper-check">
+        <FadeInWhenVisibleLeft>
+          <form className={styles.formSection}>
             <input
-              className="form_checkbox"
-              type="checkbox"
-              id="vehicle1"
-              name="vehicle1"
-              value="Bike"
-            ></input>
-            <span className="form_checkbox-label">
-              <img src="./checkmark.svg" alt="checkmark" />
-            </span>
-            Stay up-to-date with company announcements and updates to our API
-          </label>
-          <button className="secondaryDark">Submit</button>
-        </form>
+              className="form_input"
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Name"
+              required
+            />
+            <input
+              className="form_input"
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Email Address"
+              required
+            />
+            <input
+              className="form_input"
+              type="text"
+              id="company"
+              name="company"
+              placeholder="Company Name"
+              required
+            />
+            <input
+              className="form_input"
+              type="text"
+              id="title"
+              name="title"
+              placeholder="Title"
+              required
+            />
+            <textarea
+              className="form_input"
+              type="text"
+              id="message"
+              name="message"
+              placeholder="Message"
+              required
+            ></textarea>
+            <label className="form-wrapper-check">
+              <input
+                className="form_checkbox"
+                type="checkbox"
+                id="vehicle1"
+                name="vehicle1"
+                value="Bike"
+              ></input>
+              <span className="form_checkbox-label">
+                <img src="./checkmark.svg" alt="checkmark" />
+              </span>
+              Stay up-to-date with company announcements and updates to our API
+            </label>
+            <button className="secondaryDark">Submit</button>
+          </form>
+        </FadeInWhenVisibleLeft>
         <section className={styles.clients}>
           <h2 className="header4">
             Join the thousans of innovators already building with us

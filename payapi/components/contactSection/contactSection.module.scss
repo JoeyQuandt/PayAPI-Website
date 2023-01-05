@@ -21,6 +21,8 @@
         gap: em(24);
         textarea{
             padding-bottom: em(64);
+            resize: none;
+            max-width: 100%;
         }
         button{
             max-width: 152px;
@@ -89,6 +91,7 @@
             align-items: center;
             .formSection{
                 margin: 0;
+                gap: em(35);
                 max-width: 100%;
             }
             .clients{
@@ -101,4 +104,14 @@
             }
         }
     }
+    @include rwd(2000px){
+        .clients{
+            .clientsGrid{
+                gap: em(120);
+                img{
+                    width: 125%;
+                }
+            }
+        }
+     }
 }
