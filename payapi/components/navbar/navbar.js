@@ -11,9 +11,9 @@ export default function Navbar() {
   const { scrollY } = useScroll();
   /*Update function scroll onchange*/
   function update() {
-    if (scrollY.current > 0) {
+    if (scrollY?.current < scrollY?.prev) {
       setHidden(false);
-    } else {
+    } else if (scrollY.current > 100 && scrollY?.current > scrollY?.prev) {
       setHidden(true);
     }
   }
@@ -29,11 +29,11 @@ export default function Navbar() {
     <>
       <motion.nav
         className={styles.navBar}
-        animate={hidden ? "transparent" : "visible"}
+        animate={hidden ? "hidden" : "visible"}
         transition={{ ease: [0.1, 0.25, 0.3, 1], duration: 0.6 }}
         variants={{
-          visible: { backgroundColor: "#EDF3F8" },
-          transparent: { backgroundColor: "transparent" },
+          visible: { opacity: 1, y: 0 },
+          hidden: { opacity: 0, y: -25 },
         }}
       >
         <Link href="/">
